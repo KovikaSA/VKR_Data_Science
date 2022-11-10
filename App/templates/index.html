@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Композиционные материалы</title>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center"><i class="material-icons">insert_chart</i>Композитные материалы</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="https://colab.research.google.com/drive/1x0xEf5-uAzD1mTnvOjBtzIPZ589foevO#scrollTo=5BvEhMO9H1Un">VKR Colanoratory</a></li>
+        <li><a href="https://github.com/KovikaSA/VKR_Data_Science">Github VKR</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <div class="row center">
+        <h5 class="header col s12 light">Прогнозное значение параметра
+          «Соотношение матрица-наполнитель»</h5>
+      </div>
+      <div class="row center">
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="param1" type="text" class="validate">
+                <label for="param1">Плотность, кг/м3</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="param2" type="text" class="validate">
+                <label for="param2">Модуль упругости, ГПа</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="param3" type="text" class="validate">
+                <label for="param3">Количество отвердителя, м.%</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="param4" type="text" class="validate">
+                <label for="param4">Содержание эпоксидных групп,%_2</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="param5" type="text" class="validate">
+                <label for="param5">Температура вспышки, С_2</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="param6" type="text" class="validate">
+                <label for="param6">Поверхностная плотность, г/м2</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="param7" type="text" class="validate">
+                <label for="param7">Модуль упругости при растяжении, ГПа</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="param8" type="text" class="validate">
+                <label for="param8">Прочность при растяжении, МПа</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="param9" type="text" class="validate">
+                <label for="param9">Потребление смолы, г/м2</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="param10" type="text" class="validate">
+                <label for="param10">Угол нашивки, град</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="param11" type="text" class="validate">
+                <label for="param11">Шаг нашивки</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="param12" type="text" class="validate">
+                <label for="param12">Плотность нашивки</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row center">
+        <div class="row">
+          <form class="col s10 offset-s2">
+            <div class="row">
+              <div class="input-field col s10">
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Отправить<i class="material-icons right">send</i></a>
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                  <div class="modal-content">
+                    <h4>Результат прогноза</h4>
+                    <h5><i>{% if message %}{{ message }}{% endif %}</i></h5>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Ок</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer class="page-footer cyan">
+    
+    <div class="footer-copyright">
+      <div class="container">
+       <a class="white-text text-lighten-3" href="https://github.com/KovikaSA/VKR_Data_Science">Ковика Сергей</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="static/js/materialize.js"></script>
+  <script src="static/js/materialize.min.js"></script>
+  <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems, options);
+    });
+    $(document).ready(function(){
+      $('.modal').modal();
+    });
+  </script>
+  </body>
+</html>
