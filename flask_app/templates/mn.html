@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Композиционные материалы</title>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo center"><i class="material-icons">insert_chart</i>Композитные материалы</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="https://colab.research.google.com/drive/1x0xEf5-uAzD1mTnvOjBtzIPZ589foevO#scrollTo=5BvEhMO9H1Un">VKR Colanoratory</a></li>
+        <li><a href="https://github.com/KovikaSA/VKR_Data_Science">Github VKR</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <div class="row center">
+        <h5 class="header col s12 light">Прогнозное значение параметра
+          «Соотношение матрица-наполнитель»</h5>
+      </div>
+        <div class="row center">
+            <div class="row">
+              <form action="" method="post" class="col s12">
+                <div class="row">
+                  <div class="input-field col s6">
+                    <label for="plot">Введите Плотность, кг/м3</label>
+                    <input type="text" name="plot" required>
+                  </div>
+                  <div class="input-field col s6">
+                    <label for="mup">Введите Модуль упругости, ГПа</label>
+                    <input type="text" name="mup" required>
+                  </div>
+                  <div class="input-field col s6">
+                    <label for="ko">Введите Количество отвердителя, м.%</label>
+                    <input type="text" name="ko" required>
+                  </div>
+                  <div class="input-field col s6">
+                    <label for="seg">Введите Содержание эпоксидных групп,%_2</label>
+                    <input type="text" name="seg" required>
+                  </div>
+                  <div class="input-field col s6">
+                    <label for="tv">Введите Температура вспышки, С_2</label>
+                    <input type="text" name="tv" required>
+                  </div>
+                  <div class="input-field col s6">
+                    <label for="pp">Введите Поверхностная плотность, г/м2</label>
+                    <input type="text" name="pp" required>
+                  </div>
+                  <div class="input-field col s6">
+                    <label for="mup">Введите Модуль упругости при растяжении, ГПа</label>
+                    <input type="text" name="mup" required>
+                  </div>
+                  <div class="input-field col s6">
+                    <label for="pr">Введите Прочность при растяжении, МПа</label>
+                    <input type="text" name="pr" required>
+                  </div>
+                  <div class="input-field col s6">
+                    <label for="ps">Введите Потребление смолы, г/м2</label>
+                    <input type="text" name="ps" required>
+                  </div>
+                  <div class="input-field col s6">
+                    <label for="yn">Введите Угол нашивки, град</label>
+                    <input type="number" name="yn" min='0' max='90' step='1' required>
+                  </div>
+                  <div class="input-field col s6">
+                    <label for="shn">Введите Шаг нашивки</label>
+                    <input type="text" name="shn" required>
+                  </div>
+                  <div class="input-field col s6">
+                    <label for="pln">Введите Плотность нашивки</label>
+                    <input type="text" name="pln" required>
+                  </div>
+                  <button class="btn waves-effect waves-light" type="submit" name="action">Отправить
+                    <i class="material-icons right">send</i>
+                  </button>
+                  <button class="btn waves-effect waves-light" type="reset" name="action">Сброс
+                    <i class="material-icons right">cached</i>
+                  </button>
+                </div>
+                <h5>{% if message %}
+                        {{message}}
+                        {% endif %}</h5>
+                    </p>
+              </form>
+            </div>
+          </div>
+          </div>
+          </div>
+          
+          <footer class="page-footer cyan">
+            <div class="footer-copyright">
+              <div class="container">
+               <a class="white-text text-lighten-3" href="https://github.com/KovikaSA/VKR_Data_Science">Ковика Сергей</a>
+              </div>
+            </div>
+          </footer>
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+            <script src="../static/js/materialize.js"></script>
+            <script src="../static/js/materialize.min.js"></script>
+            <script type="text/javascript">
+              document.addEventListener('DOMContentLoaded', function() {
+              var elems = document.querySelectorAll('.modal');
+              var instances = M.Modal.init(elems, options);
+            });
+            $(document).ready(function(){
+              $('.modal').modal();
+            });
+          </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Композиционные материалы</title>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center"><i class="material-icons">insert_chart</i>Композитные материалы</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="https://colab.research.google.com/drive/1x0xEf5-uAzD1mTnvOjBtzIPZ589foevO#scrollTo=5BvEhMO9H1Un">VKR Colanoratory</a></li>
+        <li><a href="https://github.com/KovikaSA/VKR_Data_Science">Github VKR</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <div class="row center">
+        <h5 class="header col s12 light">        <ul>
+          <li><a href="{{url_for('mn_predict')}}">
+            <button class="waves-effect waves-light btn modal-trigger">Прогнозирование значения матрица-наполнитель</button>
+          </a></li>
+          <br>
+        </ul></h5>
+      </div>
+
+        <div class="row center">
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <h5 class="header col s12 light">Прогнозное значение параметра
+                  «Соотношение матрица-наполнитель»</h5>
+                <div class="input-field col s6">
+                  <p>Композиционные материалы — это искусственно созданные материалы, состоящие из нескольких других с четкой границей между ними.
+                    Композиты обладают теми свойствами, которые не наблюдаются у компонентов по отдельности. 
+                    При этом композиты являются монолитным материалом, т. е. компоненты материала неотделимы друг от друга без разрушения конструкции в целом. </p>
+                    </div>
+                    <div class="input-field col s6"></div>
+                <p>В данном веб-приложении можно спрогнозировать с помощью обученных нейронных сетей
+                     конечные свойства композиционных материалов, такие как
+                    [<i>Матрица-наполнитель</i>], на основе
+                    введенных пользователем значений.
+                </p>
+              </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>  
+    </div>
+    <footer class="page-footer cyan">
+      <div class="footer-copyright">
+        <div class="container">
+         <a class="white-text text-lighten-3" href="https://github.com/KovikaSA/VKR_Data_Science">Ковика Сергей</a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="../static/js/materialize.js"></script>
+    <script src="../static/js/materialize.min.js"></script>
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems, options);
+    });
+    $(document).ready(function(){
+      $('.modal').modal();
+    });
+    </script>
+  </body>
+</html>
